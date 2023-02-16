@@ -11,12 +11,16 @@ while True:
         if mm > 59 or ss > 59:
             raise Exception
         start = 3600 * hh + 60 * mm + ss
-        
+        timing = start
+        st = time.time()
         while start > 0:
             countdown(start)
-            time.sleep(1)
+            time.sleep(0.998732)
             start  = start - 1
-        print("your time has run out\nBOOM!!!")
+        print("Your time has run out\nBOOM!!!")
         break
     except:
         print("Please type correct time format")
+
+print("", f"Timer working real time:  {time.time() - st} secs", sep = "\n")
+print(f"Virtual timer calculated: {timing} secs")
