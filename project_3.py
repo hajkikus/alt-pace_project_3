@@ -24,3 +24,4 @@ while True:
 
 print("", f"Timer working real time:  {time.time() - st} secs", sep = "\n")
 print(f"Virtual timer calculated: {timing} secs")
+
